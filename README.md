@@ -1,3 +1,3 @@
 # devsecops-lab
 
-Test environment for Github actions
+Test environment for GitHub actions
