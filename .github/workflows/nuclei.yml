@@ -1,4 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run dynamic tests
+# This workflow will build the source code and run dynamic tests using Nuclei
 
 name: Dynamic Application Security Test
 
@@ -21,3 +21,7 @@ jobs:
     - run: node server.js &
     - run: |
         curl http://127.0.0.1:8080
+    - name: Run Nuclei
+      uses: projectdiscovery/nuclei-action@main
+      with:
+        target: "http://127.0.0.1:8080"
