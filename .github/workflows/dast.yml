@@ -1,0 +1,27 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run dynamic tests
+
+name: Dynamic Application Security Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+        run:
+            working-directory: /home/runner/work/devsecops-lab/devsecops-lab
+            
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 16
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.0.0
+        cache: 'npm'
+    - run: npm install
+    - run: node server.js
+    - run: curl http://127.0.0.1:8080
