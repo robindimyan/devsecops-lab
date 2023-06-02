@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.0.0
-    - run: docker-compose up
+    - run: docker-compose up --detach
     - run: curl http://127.0.0.1:8080/
         
     # - name: Run Nuclei
