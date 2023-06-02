@@ -1,6 +1,6 @@
 # This workflow will build the source code and run dynamic tests using Nuclei
 
-name: Nuclei Dynamic Security Test
+name: Nuclei Dynamic Scan
 
 on:
   push:
