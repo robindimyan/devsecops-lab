@@ -10,14 +10,14 @@
   "author": "Manjil Tamang",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.2",
-    "bootstrap": "^3.4.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^3.3.7",
     "dateformat": "^3.0.3",
-    "ejs": "^3.1.7",
-    "express": "^4.17.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
     "express-partials": "^0.3.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.5.0",
+    "jquery": "^3.3.1",
     "mysql": "^2.16.0",
     "tether": "^1.4.5"
   }
