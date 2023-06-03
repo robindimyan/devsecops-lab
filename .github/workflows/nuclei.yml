@@ -28,7 +28,8 @@ jobs:
     - name: Run Nuclei
       uses: projectdiscovery/nuclei-action@main
       with:
-        target: "http://127.0.0.1:3000"
+        target: "http://127.0.0.1:8080"
+        flags: -t http/exposures
 
     # - name: GitHub Security Dashboard Alerts update
     #   uses: github/codeql-action/upload-sarif@v2
