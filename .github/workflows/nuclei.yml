@@ -1,6 +1,6 @@
 # This workflow will build the source code and run dynamic tests using Nuclei
 
-name: Nuclei Dynamic Security Test
+name: Nuclei Dynamic Scan
 
 on:
   push:
@@ -13,13 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Build project with Node.js 16
+
+    - name: Build project with Node.js 16s
       uses: actions/setup-node@v3
       with:
         node-version: 16.0.0
-    - run: docker-compose up -d
-    - run: |
-        curl http://127.0.0.1:8080
+    - run: docker-compose up --build --detach
+
+    - name: Wait on HTTP server response
+      uses: iFaxity/wait-on-action@v1
+      with:
+        resource: http://127.0.0.1:8080
         
     # - name: Run Nuclei
     #   uses: projectdiscovery/nuclei-action@main
