@@ -25,12 +25,12 @@ jobs:
       with:
         resource: http://127.0.0.1:8080
         
-    # - name: Run Nuclei
-    #   uses: projectdiscovery/nuclei-action@main
-    #   with:
-    #     target: "http://127.0.0.1:3000"
+    - name: Run Nuclei
+      uses: projectdiscovery/nuclei-action@main
+      with:
+        target: "http://127.0.0.1:3000"
 
-    # - name: GitHub Security Dashboard Alerts update
-    #   uses: github/codeql-action/upload-sarif@v2
-    #   with:
-    #     sarif_file: nuclei.sarif
+    - name: GitHub Security Dashboard Alerts update
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: nuclei.sarif
