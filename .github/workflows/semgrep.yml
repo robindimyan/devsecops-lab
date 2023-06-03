@@ -14,10 +14,9 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [ "main" ]
-  schedule:
-    - cron: '19 8 * * 2'
+  # schedule:
+  #   - cron: '19 8 * * 2'
 
 permissions:
   contents: read

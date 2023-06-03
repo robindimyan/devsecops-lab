@@ -17,10 +17,9 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [ "main" ]
-  schedule:
-    - cron: '31 8 * * 5'
+  # schedule:
+  #   - cron: '31 8 * * 5'
 
 permissions:
   contents: read
@@ -49,7 +48,7 @@ jobs:
       with:
         image: your/image-to-test
         args: --file=Dockerfile
-    # - name: Upload result to GitHub Code Scanning
+    # - name: Upload result to GitHub Code Scannings
     #   uses: github/codeql-action/upload-sarif@v2
     #   with:
     #     sarif_file: snyk.sarif
