@@ -21,7 +21,7 @@ jobs:
     - run: docker-compose up --build --detach
 
     - name: Wait on HTTP server response
-      uses: iFaxity/wait-on-action@v1s
+      uses: iFaxity/wait-on-action@v1
       with:
         resource: http://127.0.0.1:8080
         
