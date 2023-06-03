@@ -1,0 +1,17 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: Deployment
+    steps:
+      - name: deploy
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.0.0
+      - run: docker-compose up --build --detach
