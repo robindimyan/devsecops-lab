@@ -35,7 +35,7 @@ app.use('/fonts', express.static(__dirname + '/node_modules/font-awesome/fonts')
 */
 const conn = mysql.createConnection({
   host: 'mysql-dev',
-  user: 'root',
+  user: 'root', // Root account password
   password: 'root',
   database: 'node_crud'
 });
