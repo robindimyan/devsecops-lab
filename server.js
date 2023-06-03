@@ -10,7 +10,7 @@ var dateFormat = require('dateformat');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var now = new Date();
-
+var hello_api_key = "7b94vAOhWhmz5hH7ww4y89kHrRtpuUi2";
 /*
 * This is the view engine
 * Template parsing
